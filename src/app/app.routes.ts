@@ -3,6 +3,7 @@ import { RouterConfig } from '@angular/router';
 import { Home } from './home';
 import { NoContent } from './no-content';
 import { Login } from './components/login/login';
+import { Register } from './components/register/register.component';
 
 import { DataResolver } from './app.resolver';
 import {AuthGuard} from './services/authguard.service';
@@ -11,6 +12,7 @@ export const routes: RouterConfig = [
   { path: '',      component: Home },
   { path: 'home',  component: Home },
   { path: 'login', component: Login },
+  { path: 'register', component: Register },
   // make sure you match the component type string to the require in asyncRoutes
   { path: 'about', component: 'About',
     canActivate: [AuthGuard],
