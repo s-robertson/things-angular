@@ -11,6 +11,10 @@ import { provideRouter } from '@angular/router';
 // Angular 2 forms
 import { disableDeprecatedForms, provideForms } from '@angular/forms';
 
+import { SocketService, RestService } from '../app/services/feathers.service';
+import { AuthService } from '../app/services/auth.service';
+import { AuthGuard } from '../app/services/authguard.service';
+
 // AngularClass
 import { provideWebpack } from '@angularclass/webpack-toolkit';
 import { providePrefetchIdleCallbacks } from '@angularclass/request-idle-callback';
@@ -26,6 +30,7 @@ export const APPLICATION_PROVIDERS = [
   // new Angular 2 forms
   disableDeprecatedForms(),
   provideForms(),
+  AuthGuard,
 
   ...APP_RESOLVER_PROVIDERS,
 
@@ -35,7 +40,10 @@ export const APPLICATION_PROVIDERS = [
 
   ...HTTP_PROVIDERS,
 
-  { provide: LocationStrategy, useClass: HashLocationStrategy }
+  { provide: LocationStrategy, useClass: HashLocationStrategy },
+  SocketService,
+  RestService,
+  AuthService
 ];
 
 export const PROVIDERS = [
