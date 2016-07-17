@@ -53,10 +53,9 @@ module.exports = {
    * See: http://webpack.github.io/docs/configuration.html#entry
    */
   entry: {
-
     'polyfills': './src/polyfills.browser.ts',
     'vendor':    './src/vendor.browser.ts',
-    'main':      './src/main.browser.ts'
+    'main':      [ 'bootstrap-loader', './src/main.browser.ts']
 
   },
 
@@ -154,15 +153,19 @@ module.exports = {
         loader: 'json-loader'
       },
 
-      /*
-       * to string and css loader support for *.css files
-       * Returns file content as string
-       *
-       */
+      { test: /\.css$/, loaders: [ 'style', 'css', 'postcss' ] },
+      { test: /\.scss$/, loaders: [ 'style', 'css', 'postcss', 'sass' ] },
       {
-        test: /\.css$/,
-        loaders: ['to-string-loader', 'css-loader']
+        test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "url?limit=10000"
       },
+      {
+        test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+        loader: 'file'
+      },
+
+      // Bootstrap 4
+      //{ test: /bootstrap\/dist\/js\/umd\//, loader: 'imports?jQuery=jquery' },
 
       /* Raw loader support for *.html
        * Returns file content as string

@@ -5,6 +5,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
 
 import { AppState } from './app.service';
 
+require('bootstrap-loader');
+
 /*
  * App Component
  * Top Level Component
@@ -12,9 +14,6 @@ import { AppState } from './app.service';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: [
-    './app.style.css'
-  ],
   template: `
     <nav>
       <span>
