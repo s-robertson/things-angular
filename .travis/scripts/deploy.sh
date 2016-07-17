@@ -5,7 +5,7 @@ if [ $TRAVIS_BRANCH == 'master' ] ; then
     chmod 600 ~\/.ssh/things-deploy
     ssh-add ~\/.ssh/things-deploy
 
-    git remote add deploy "things@robotscostrent.com:/var/www/things"
+    git remote add deploy "things@robotscostrent.com:/var/www/things-angular"
     git config user.name "Travis CI"
     git config user.email "srobertson203@gmail.com"
     git push deploy master
