@@ -8,7 +8,5 @@ node_js:
 sudo: false
 before_install:
 - bash .travis/scripts/before_install.sh
-script:
-- bash .travis/scripts/build.sh
 after_success:
 - bash .travis/scripts/deploy.sh
