@@ -1,11 +1,20 @@
 language: node_js
+sudo: true
+sudo: required
+dist: trusty
 addons:
   ssh_known_hosts: robotscostrent.com
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+notifications:
+  email: false
 node_js:
 - '4'
 - '5'
 - node
-sudo: false
 before_install:
 - bash .travis/scripts/before_install.sh
 after_success:
