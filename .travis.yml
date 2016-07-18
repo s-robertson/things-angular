@@ -4,11 +4,6 @@ sudo: required
 dist: trusty
 addons:
   ssh_known_hosts: robotscostrent.com
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
 notifications:
   email: false
 node_js:
