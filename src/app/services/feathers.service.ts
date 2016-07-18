@@ -9,7 +9,7 @@ const authentication = require('feathers-authentication/client');
 import { Injectable } from '@angular/core';
 
 const superagent = require('superagent');
-const HOST = 'http://localhost:9000';
+const HOST = 'http://localhost:900';
 
 @Injectable()
 export class RestService {

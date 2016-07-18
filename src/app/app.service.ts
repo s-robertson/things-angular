@@ -19,7 +19,6 @@ export class AppState {
     throw new Error('do not mutate the `.state` directly');
   }
 
-
   get(prop?: any) {
     // use our state getter for the clone
     const state = this.state;

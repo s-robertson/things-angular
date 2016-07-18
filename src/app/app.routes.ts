@@ -5,8 +5,7 @@ import { NoContent } from './no-content';
 import { Login } from './components/login/login';
 import { Register } from './components/register/register.component';
 
-import { DataResolver } from './app.resolver';
-import {AuthGuard} from './services/authguard.service';
+import { AuthGuard } from './services/authguard.service';
 
 export const routes: RouterConfig = [
   { path: '',      component: Home },
@@ -15,10 +14,8 @@ export const routes: RouterConfig = [
   { path: 'register', component: Register },
   // make sure you match the component type string to the require in asyncRoutes
   { path: 'about', component: 'About',
-    canActivate: [AuthGuard],
-    resolve: {
-      'yourData': DataResolver
-    }},
+    canActivate: [AuthGuard]
+  },
   // async components with children routes must use WebpackAsyncRoute
   { path: 'detail', component: 'Detail',
     canActivate: [ WebpackAsyncRoute ],
