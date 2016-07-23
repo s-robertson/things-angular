@@ -3,6 +3,7 @@ import { GameComponent } from "./game.component";
 import { GamePlayComponent } from './game-play.component';
 import { GameJoinFormComponent } from './join-form/game-join-form.component';
 import { GameNewComponent } from './game-new.component';
+import {GameJoinComponent} from "./join/game-join.component";
 
 export const gameRoutes: RouterConfig = [
   {
@@ -10,8 +11,9 @@ export const gameRoutes: RouterConfig = [
     component: GameComponent,
     children: [
       { path: 'join', component: GameJoinFormComponent },
+      { path: 'join/:code', component: GameJoinComponent },
       { path: 'new', component: GameNewComponent },
-      { path: ':id', component: GamePlayComponent }
+      { path: ':code', component: GamePlayComponent }
     ],
   }
 ];

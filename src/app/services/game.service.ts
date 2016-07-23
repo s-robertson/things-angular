@@ -1,5 +1,6 @@
 import { RestService, SocketService } from './feathers.service';
 import { Injectable } from '@angular/core';
+import { Game } from '../models/game';
 
 @Injectable()
 export class GameService {
@@ -16,6 +17,14 @@ export class GameService {
       console.log(result);
     }).catch(error => {
       console.error(error);
+    });
+  }
+
+  get(code: string): Promise<Game> {
+    // @TODO: make actual call to API
+    return new Promise<Game>((resolve, reject) => {
+      reject('no game');
+      resolve(new Game('12345', 1));
     });
   }
 }

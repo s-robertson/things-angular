@@ -5,9 +5,9 @@ import { Router } from '@angular/router';
   templateUrl: './game-join-form.template.html'
 })
 export class GameJoinFormComponent {
-  constructor(private router: Router){}
+  gameCode: string = '';
 
-  gameCode:string = '';
+  constructor(private router: Router) {}
 
   onSubmit() {
     this.router.navigate(['./game/join/' + this.gameCode]);

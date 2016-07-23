@@ -1,6 +1,4 @@
-/* tslint:disable:no-unused-variable */
-
-import { addProviders, async, inject } from '@angular/core/testing';
+import { addProviders, inject } from '@angular/core/testing';
 import { GameJoinFormComponent } from './game-join-form.component';
 import { Router } from '@angular/router';
 
