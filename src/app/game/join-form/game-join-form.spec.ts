@@ -1,4 +1,4 @@
-import { GameJoinComponent } from './game-join.component';
+import { GameJoinFormComponent } from './game-join-form.component';
 import {TestComponentBuilder,
   addProviders,
   inject,
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 
 class MockRouter {}
 
-describe('join game component', () => {
+describe('join-form game component', () => {
   let builder;
 
   beforeEach(() => {
@@ -22,9 +22,9 @@ describe('join game component', () => {
   }));
 
   // @TODO: come back to this once async tests work better
-  /*it('should render join game form', async(() => {
-    builder.createAsync(GameJoinComponent)
-      .then((fixture: ComponentFixture<GameJoinComponent>) => {
+  /*it('should render join-form game form', async(() => {
+    builder.createAsync(GameJoinFormComponent)
+      .then((fixture: ComponentFixture<GameJoinFormComponent>) => {
         fixture.detectChanges();
         let compiled = fixture.debugElement.nativeElement;
         expect(compiled.querySelector('input[name="gameCode"]').length).toBeGreaterThan(0);

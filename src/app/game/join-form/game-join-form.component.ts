@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  templateUrl: './game-join.template.html'
+  templateUrl: './game-join-form.template.html'
 })
-export class GameJoinComponent {
+export class GameJoinFormComponent {
   constructor(private router: Router){}
 
   gameCode:string = '';
