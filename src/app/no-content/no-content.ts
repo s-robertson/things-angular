@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'no-content',
   template: `
     <div>
-      <h1>404: page missing</h1>
+      <h1>Whoops!</h1>
+      <p>Sorry, we couldn't find the page you're looking for.</p>
     </div>
   `
 })
