@@ -1,33 +1,23 @@
+/* tslint:disable:no-unused-variable */
+
+import { addProviders, async, inject } from '@angular/core/testing';
 import { GameJoinFormComponent } from './game-join-form.component';
-import {TestComponentBuilder,
-  addProviders,
-  inject,
-  async,
-  ComponentFixture} from '@angular/core/testing';
 import { Router } from '@angular/router';
 
 class MockRouter {}
 
-describe('join-form game component', () => {
-  let builder;
-
+describe('GameJoinFormComponent: Testing', () => {
   beforeEach(() => {
-    addProviders([
-      { provide: Router, useClass: MockRouter }
-    ]);
+    addProviders(
+      [
+        { provide: Router, useClass: MockRouter },
+        GameJoinFormComponent
+      ]
+    );
   });
 
-  beforeEach(inject([TestComponentBuilder], (tcb) => {
-    builder = tcb;
-  }));
-
-  // @TODO: come back to this once async tests work better
-  /*it('should render join-form game form', async(() => {
-    builder.createAsync(GameJoinFormComponent)
-      .then((fixture: ComponentFixture<GameJoinFormComponent>) => {
-        fixture.detectChanges();
-        let compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('input[name="gameCode"]').length).toBeGreaterThan(0);
-      });
-  }));*/
+  it('should create the join game form component',
+    inject([GameJoinFormComponent], (component: GameJoinFormComponent) => {
+      expect(component).toBeTruthy();
+    }));
 });
