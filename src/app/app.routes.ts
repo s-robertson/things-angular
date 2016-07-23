@@ -4,6 +4,7 @@ import { Home } from './home';
 import { NoContent } from './no-content';
 import { Login } from './components/login/login';
 import { Register } from './components/register/register.component';
+import { gameRoutes } from './game/game.routes';
 
 import { AuthGuard } from './services/authguard.service';
 
@@ -22,7 +23,8 @@ export const routes: RouterConfig = [
     children: [
       { path: '', component: 'Index' }  // must be included
     ]},
-  { path: '**',    component: NoContent },
+  ...gameRoutes,
+  { path: '**',    component: NoContent }
 ];
 
 // Async load a component using Webpack's require with es6-promise-loader and webpack `require`
