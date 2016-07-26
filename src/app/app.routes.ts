@@ -2,7 +2,7 @@ import { WebpackAsyncRoute } from '@angularclass/webpack-toolkit';
 import { RouterConfig } from '@angular/router';
 import { Home } from './home';
 import { NoContent } from './no-content';
-import { Login } from './components/login/login';
+import { Login } from './components/login/login.component';
 import { Register } from './components/register/register.component';
 import { gameRoutes } from './game/game.routes';
 

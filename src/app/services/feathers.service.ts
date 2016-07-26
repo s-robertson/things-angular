@@ -9,7 +9,7 @@ const authentication = require('feathers-authentication/client');
 import { Injectable } from '@angular/core';
 
 const superagent = require('superagent');
-const HOST = 'http://localhost:900';
+const HOST = 'http://localhost:9000';
 
 @Injectable()
 export class RestService {
@@ -37,6 +37,7 @@ export class SocketService {
   private _app: any;
 
   constructor() {
+    console.log('CONNECTED');
     this.socket = io(HOST);
     this._app = feathers()
       .configure(socketio(this.socket))
