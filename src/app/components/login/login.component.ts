@@ -12,7 +12,7 @@ export class Login {
   private password: string;
   private message: string;
 
-  constructor(private restService: RestService, private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   onSubmit() {
     this.authService.authenticate(this.email, this.password)
@@ -22,7 +22,7 @@ export class Login {
       .catch(err => {
         console.log(err);
         this.message = err.message;
-      })
+      });
   }
 
   ngOnInit() {

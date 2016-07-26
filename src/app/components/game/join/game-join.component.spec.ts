@@ -3,7 +3,7 @@ import { GameJoinComponent } from './game-join.component';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 import { Game } from '../../models/game';
-import { GameService } from '../../services/game.service';
+import { GameService } from '../service/game.service';
 
 class MockRouter {}
 

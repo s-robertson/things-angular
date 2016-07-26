@@ -2,21 +2,20 @@ import {
   inject,
   addProviders
 } from '@angular/core/testing';
+import { GameComponent } from './game.component';
 
 // Load the implementations that should be tested
-import { Home } from './home.component';
-
-describe('Home', () => {
+describe('GameComponent: Testing', () => {
   beforeEach(() => {
     addProviders(
       [
-        Home
+        GameComponent
       ]
     );
   });
 
-  it('should create the home component',
-    inject([Home], (component: Home) => {
+  it('should create the game component',
+    inject([GameComponent], (component: GameComponent) => {
       expect(component).toBeTruthy();
     }));
 });

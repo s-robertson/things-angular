@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { GameService } from '../service/game.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Game } from '../../models/game';
 
 @Component({
@@ -12,8 +12,7 @@ export class GameJoinComponent {
 
   constructor(
     private gameService: GameService,
-    private route: ActivatedRoute,
-    private router: Router) {}
+    private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
