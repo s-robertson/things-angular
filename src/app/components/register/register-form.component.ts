@@ -7,7 +7,7 @@ import { User } from '../models/user';
   selector: 'register-form',
   templateUrl: './register-form.html'
 })
-export class RegisterForm {
+export class RegisterFormComponent {
   user = new User();
   submitted = false;
 

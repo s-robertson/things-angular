@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { RegisterForm } from './register-form.component';
+import { RegisterFormComponent } from './register-form.component';
 
 @Component({
   selector: 'register',
   template: '<register-form></register-form>',
-  directives: [RegisterForm]
+  directives: [RegisterFormComponent]
 })
-export class Register {}
+export class RegisterComponent {}
