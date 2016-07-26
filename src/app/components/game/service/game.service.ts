@@ -1,6 +1,6 @@
 import { RestService, SocketService } from '../../../services/feathers.service';
 import { Injectable } from '@angular/core';
-import { Game } from '../../models/game';
+import { Game } from '../../../models/game';
 
 @Injectable()
 export class GameService {

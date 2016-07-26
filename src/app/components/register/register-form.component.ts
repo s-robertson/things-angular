@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { User } from '../models/user';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'register-form',

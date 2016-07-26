@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { GameService } from '../service/game.service';
 import { ActivatedRoute } from '@angular/router';
-import { Game } from '../../models/game';
+import { Game } from '../../../models/game';
 
 @Component({
   templateUrl: './game-join.template.html'
