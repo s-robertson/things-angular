@@ -15,12 +15,7 @@ import { SocketService, RestService } from '../app/services/feathers.service';
 import { AuthService } from '../app/services/auth.service';
 import { AuthGuard } from '../app/services/authguard.service';
 
-// AngularClass
-import { provideWebpack } from '@angularclass/webpack-toolkit';
-import { providePrefetchIdleCallbacks } from '@angularclass/request-idle-callback';
-
-
-import { routes, asyncRoutes, prefetchRouteCallbacks } from '../app/app.routes';
+import { routes } from '../app/app.routes';
 
 /*
 * Application Providers/Directives/Pipes
@@ -33,8 +28,6 @@ export const APPLICATION_PROVIDERS = [
   AuthGuard,
 
   provideRouter(routes),
-  provideWebpack(asyncRoutes),
-  providePrefetchIdleCallbacks(prefetchRouteCallbacks),
 
   ...HTTP_PROVIDERS,
 

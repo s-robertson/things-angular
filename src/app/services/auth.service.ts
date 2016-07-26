@@ -11,7 +11,7 @@ export class AuthService {
     this.socketApp = socketService.getApp();
   }
 
-  authenticate(email, password): Promise {
+  authenticate(email, password): Promise<any> {
     return this.socketApp.authenticate({
       type: 'local',
       email: email,

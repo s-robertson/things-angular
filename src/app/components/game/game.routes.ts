@@ -4,7 +4,7 @@ import { GamePlayComponent } from './game-play.component';
 import { GameJoinFormComponent } from './join-form/game-join-form.component';
 import { GameNewComponent } from './game-new.component';
 import {GameJoinComponent} from "./join/game-join.component";
-import { AuthGuard } from '../services/authguard.service';
+import { AuthGuard } from '../../services/authguard.service';
 
 export const gameRoutes: RouterConfig = [
   {
