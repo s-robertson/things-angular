@@ -10,7 +10,7 @@ class MockRouter {}
 class MockGameService {
   get(code: string): Promise<Game> {
     return new Promise<Game>((resolve, reject) => {
-      resolve(new Game(code, 1));
+      resolve(new Game(1, code));
     });
   }
 }

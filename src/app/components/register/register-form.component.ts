@@ -1,17 +1,25 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
-
 import { User } from '../../models/user';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'register-form',
-  templateUrl: './register-form.html'
+  templateUrl: './register-form.html',
+  providers: [ UserService ]
 })
 export class RegisterFormComponent {
-  user = new User();
-  submitted = false;
+  private user: User = new User();
+  private errors: Array<string> = [];
+
+  constructor(private userService: UserService) {}
 
   onSubmit() {
-    this.submitted = true;
+    this.userService.create(this.user)
+      .then(user => {
+        // @TODO: Where to go once user is created?
+      })
+      .catch(err => {
+        this.errors.push(err);
+      });
   }
 }

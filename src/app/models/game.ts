@@ -1,6 +1,6 @@
 export class Game {
   constructor(
-    private code: string = '',
-    private id: number = 0,
+    public id: number = 0,
+    public code: string = '',
   ) {}
 }

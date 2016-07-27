@@ -24,7 +24,7 @@ export class GameService {
     // @TODO: make actual call to API
     return new Promise<Game>((resolve, reject) => {
       reject('no game');
-      resolve(new Game('12345', 1));
+      resolve(new Game(1, '12345'));
     });
   }
 }

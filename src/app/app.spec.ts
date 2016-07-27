@@ -12,8 +12,8 @@ describe('App', () => {
     addProviders([ App ]);
   });
 
-  /*it('should have state', inject([ App ], (app) => {
-    expect(app.appState).toBeDefined();
-  }));*/
-
+  it('should create the app component',
+    inject([App], (component: App) => {
+      expect(component).toBeTruthy();
+    }));
 });
